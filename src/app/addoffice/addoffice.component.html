@@ -1,0 +1,30 @@
+
+<form method="post" (ngSubmit)="submit()" [formGroup]="officeForm">
+
+    <div class="form-group">
+        <label for="" class="form-label">Id</label>
+        <input type="text" name="id" formControlName="id" class="form-control">
+    </div>
+    <div>
+        <label for="" class="form-label">Manager</label>
+        <input type="text" name="id" formControlName="manager" class="form-control">
+    </div>
+    <div>
+        <label for="" class="form-label">Location</label>
+        <input type="text" name="id" formControlName="location" class="form-control">
+    </div>
+    <div>
+        <label for="" class="form-label">Phone Number</label>
+        <input type="text" name="id" formControlName="phoneNumber" class="form-control">
+    </div>
+    <div>
+        <label for="" class="form-label">Pincode</label>
+        <input type="text" name="id" formControlName="pincode" class="form-control">
+    </div>
+    <div>
+        <input type="submit" value="Add" [disabled]="!officeForm.valid" class="btn btn-info">
+    </div>
+</form>
+
+{{officeForm.value|json}}
+

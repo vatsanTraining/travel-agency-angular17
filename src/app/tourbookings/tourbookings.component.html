@@ -1,0 +1,32 @@
+
+<div>
+    <label>Search</label>
+  <input type="search" name="srchFld" [(ngModel)]="srchValue" placeholder="customerName" class="form-control">
+</div>
+
+
+    <table class="table table-fixed">
+      <thead>
+        <tr>
+          <th class="w-1/3 px-4 py-2">Customer Name</th>
+          <th class="w-1/3 px-4 py-2">Tour</th>
+          <th class="w-1/3 px-4 py-2">Mobile Number</th>
+        </tr>
+      </thead>
+      <tbody>
+  
+        
+        @for (eachBooking of bookingsList | filter: ['customerName'] : srchValue; track eachBooking.id) {
+
+      <tr>
+              <td class="border">{{eachBooking.customerName}}</td>
+              <td class="border">{{eachBooking.tour |uppercase}}</td>
+              <td class="border">{{eachBooking.mobileNumber}}</td>
+            </tr>
+        
+}
+      </tbody>
+      </table>
+  
+
+     

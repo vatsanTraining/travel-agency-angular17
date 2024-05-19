@@ -1,0 +1,32 @@
+
+<form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+
+    <div>
+    <label>Customer Name</label>
+    <input type="text" formControlName="customerName" required 
+     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="customerName"  >
+    
+</div>
+<div>
+    <label>Id</label>
+    <input type="text" formControlName="id" required      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="customerName"  >
+    
+</div>
+<div>
+    <label>Email Id</label>
+    <input type="email" formControlName="email" email="required"      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="customerName"  >
+    
+</div>
+<div>
+    <label>Tour Name</label>
+    <input type="text" formControlName="tour" required      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="customerName"  >
+    
+</div>
+    <button type="submit"  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+    Book Tour
+    </button>
+    </form>    
+
+{{bookingForm.value |json}}
+
+<h2>{{message}}</h2>

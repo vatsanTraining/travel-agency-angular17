@@ -1,0 +1,23 @@
+<nav class="navbar  navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img [src]="logo" [class]="['d-inline-block']" alt="" width="20" height="24" >
+      Star Tours
+    </a>
+    <a [routerLink]="'/dashboard'" [class]="['nav-item']" >Dashboard</a>
+    <a [routerLink]="'/tours'" class="nav-item">Tours</a>
+    @if(showLogin){
+    <a [routerLink]="'/login'" class="nav-item">Login</a>
+    }
+    @if(showLogout){
+      <a [routerLink]="'/logout'" class="nav-item">Logout</a>
+      }
+    <a [routerLink]="'/tourbookings'" class="nav-item">Bookings</a>
+    <a [routerLink]="'/offices'" class="nav-item">Offices</a>
+    <img [src]="profile" alt="profile photo" 
+         [class]="['img-thumbnail']" width="50" height="54">
+
+  </div>
+</nav>
+
+

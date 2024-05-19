@@ -1,0 +1,38 @@
+
+
+  <div class="container">
+
+
+    <div class="row row-cols-3">
+
+    
+    @for (item of tourList; track $index) {
+    
+        <div class="col">
+          <div class="card">
+            <div class="card-header"></div> 
+            <img  src="{{item.image}}" alt="Mountain">
+          </div>
+        <div class="card-body"> 
+          <h5 class="card-title">{{item.details| uppercase}}</h5> 
+          <p class="card-text"> 
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+            A ratione sapiente aliquam magnam blanditiis, quo, 
+            facilis doloribus delectus ipsum dolorem laborum corporis eligendi! 
+            Voluptatem atque, at iste aliquid consectetur consequatur!
+          </p> 
+      </div>
+      <div class="card-footer">
+        <a [routerLink]="['/book']" [class]="['btn','btn-info']">Book</a>
+      </div>
+</div>
+    }
+</div>   
+</div>   
+
+       
+
+  
+    
+
+

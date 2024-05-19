@@ -1,0 +1,16 @@
+
+<form method="post" (ngSubmit)="update()" #editForm="ngForm">
+
+     <div>
+        <label for="">Manager</label>
+        <input type="text" name="id" [(ngModel)]="toEdit.manager">
+    </div>
+    <div><label for="">Location</label><input type="text" name="location" [(ngModel)]="toEdit.location"></div>
+    <div><label for="">Phone Number</label><input type="text" name="phoneNumber" [(ngModel)]="toEdit.phoneNumber"></div>
+    <div><label for="">Pincode</label><input type="text" name="pincode" [(ngModel)]="toEdit.pincode"></div>
+    <div><input type="submit" value="Edit">
+    </div>
+</form>
+
+{{editForm.value|json}}
+

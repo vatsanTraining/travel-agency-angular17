@@ -1,0 +1,40 @@
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-3">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        
+        <mat-icon fontIcon="home"></mat-icon>
+      </button>
+
+   <mat-menu #menu="matMenu">
+     <button mat-menu-item (click)="handleClick('tour')">
+       <mat-icon fontIcon="thumb_up"></mat-icon>
+       <span>Tours</span>
+     </button>
+     <button mat-menu-item (click)="handleClick('revenue')">
+       <mat-icon fontIcon="trending_up"></mat-icon>
+       <span>Revenue</span>
+     </button>
+     <button mat-menu-item (click)="handleClick('review')">
+       <mat-icon fontIcon="star_rate"></mat-icon>
+       <span>Review</span>
+     </button>
+   </mat-menu> 
+   
+    </div>
+
+
+
+    <div class="col-md-8">
+
+    <ng-container *ngComponentOutlet="currentComponent"></ng-container>
+
+  </div>
+
+  </div>
+
+
+
+    
