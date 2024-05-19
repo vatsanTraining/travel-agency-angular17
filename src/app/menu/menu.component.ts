@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { UtitlityService } from '../utitlity.service';
 
@@ -15,6 +15,10 @@ export class MenuComponent {
   profile ='assets/images/profilephoto.jpeg'
   showLogin: boolean=true
   showLogout: boolean=false;
+
+
+  @Input() title:string='';
+
   constructor(private service:UtitlityService){
 
   }
